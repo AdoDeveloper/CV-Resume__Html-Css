@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CV - Adolfo Ernesto Cortez Barrera</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contenedor__principal {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            background-color: white;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
+        }
+
+        .contenedor__principal-izquierda {
+            position: relative;
+            background-color: #003147;
+            padding: 40px;
+        }
+
+        .texto-perfil {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contenedor-img {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+
+        .contenedor-img img {
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .texto-perfil h2 {
+            color: white;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+
+        .texto-perfil h2 span {
+            font-size: 0.5em;
+            font-weight: 300;
+        }
+
+        .informacion__contacto {
+            padding-top: 40px;
+        }
+
+        .titulo {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .informacion__contacto ul {
+            position: relative;
+        }
+
+        .informacion__contacto ul li {
+            position: relative;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        .icono {
+            display: inline-block;
+            width: 20px;
+            font-size: 16px;
+            padding: 1px;
+            color: #03a9f4;
+        }
+
+        .texto{
+            color: white;
+            font-weight: 300;
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .texto a{
+            color: white;
+            font-weight: 300;
+            font-size: 15px;
+            text-align: justify;
+            text-decoration: none;
+        }
+
+        .informacion__contacto.educacion li {
+            margin-bottom: 15px;
+        }
+
+        .informacion__contacto.educacion h5 {
+            color: #03a9f4;
+            font-weight: 500;
+        }
+
+        .informacion__contacto.educacion h4:nth-child(2) {
+            color: white;
+            font-weight: 500;
+        }
+
+        .informacion__contacto.educacion h4 {
+            color: white;
+            font-weight: 300;
+        }
+
+        .informacion__contacto.idiomas .porcentaje {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background-color: #081921;
+            display: block;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        .informacion__contacto.idiomas .porcentaje div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #03a9f4;
+            border-radius: 5px;
+        }
+
+        .contenedor__principal-derecha {
+            position: relative;
+            background-color: white;
+            padding: 40px;
+        }
+
+        .about {
+            margin-bottom: 50px;
+        }
+
+        .about:last-child {
+            margin-bottom: 0;
+        }
+
+        .titulo2 {
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+        }
+
+        .about .box {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+
+        .year_company {
+            min-width: 150px;
+        }
+
+        .year_company h5 {
+            text-transform: uppercase;
+            color: #848c90;
+            font-weight: 600;
+        }
+
+        .about .box .texto h4 {
+            text-transform: uppercase;
+            color: #2a7da2;
+            font-size: 16px;
+        }
+
+        .habilidades .box {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        .habilidades .box h4 {
+            text-transform: uppercase;
+            color: #848c99;
+            font-weight: 500;
+        }
+
+        .habilidades .box .porcentaje {
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background-color: #c7c7c7;
+            border-radius: 5px;
+        }
+
+        .habilidades .box .porcentaje div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #03a9f4;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        .intereses ul{
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+        }
+
+        .intereses ul li{
+            list-style: none;
+            color: #333;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .intereses ul li i{
+            font-size: 18px;
+            width: 30px;
+            color: #03a9f4;
+        }
+
+        @media screen and (max-width: 1024px) {
+          
+            .contenedor__principal{
+                margin: 10px;
+                grid-template-columns: repeat(1,1fr);
+            }
+
+            .intereses ul{
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+          .about .box{
+            flex-direction: column;
+          }
+
+          .about .box .year_company{
+            min-width: 150px;
+            margin-bottom: 5px;
+          }
+          
+          .intereses ul{
+            grid-template-columns: repeat(1, 1fr);
+            }
+          
+          .habilidades .box{
+            grid-template-columns: repeat(1,1fr);
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="contenedor__principal">
+        <section class="contenedor__principal-izquierda">
+            <div class="texto-perfil">
+                <div class="contenedor-img">
+                    <img src="img.jpg" alt="">
+                </div>
+                <h2>Adolfo Ernesto Cortez Barrera<br><span>Developer | UX/UI Design</span></h2>
+            </div>
+
+            <article class="informacion__contacto">
+                <h3 class="titulo">Contactos</h3>
+                <ul>
+                    <li>
+                        <span class="icono"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="texto">+503 76606320</span>
+                    </li>
+                    <li>
+                        <span class="icono"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="texto"><a href="mailto:cortezadolfo180@gmail.com?Subject=Deseo%20contactarte" target="_blank">cortezadolfo180@gmail.com</a></span>
+                    </li>
+                    <li>
+                        <span class="icono"><i class="fa-brands fa-linkedin-in"></i></i></span>
+                        <span class="texto"><a href="https://www.linkedin.com/in/adolfo-ernesto-cortez-barrera/" target="_blank">www.linkedin.com/me</a></span>
+                    </li>
+
+                    <li>
+                        <span class="icono"><i class="fa-solid fa-location-dot"></i></span>
+                        <span class="texto"><a href="https://goo.gl/maps/wbrM5vyg9PK4Pxe97">Acajutla, Sonsonate, El Salvador</a></span>
+                    </li>
+                </ul>
+            </article>
+            <article class="informacion__contacto">
+                <h3 class="titulo">Proyectos</h3>
+                <ul>
+                    <li>
+                        <span class="icono"><i class="fa-brands fa-github"></i></span>
+                        <span class="texto"><a href="https://github.com/AdoDeveloper">github.com/me</a></span>
+                    </li>
+                    <li>
+                        <span class="icono"><i class="fa-brands fa-codepen"></i></span>
+                        <span class="texto"><a href="https://codepen.io/AdoDeveloper" target="_blank">codepen.io/me</a></span>
+                    </li>
+                    <li>
+                        <span class="icono"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="texto"><a href="www.misitio.com" target="_blank">www.misitio.com</a></span>
+                    </li>
+                </ul>
+            </article>
+
+
+            <article class="informacion__contacto educacion">
+                <h3 class="titulo">Educacion</h3>
+                <ul>
+
+                    <li>
+                        <h5>2021-Actualidad</h5>
+                        <h4>Ingeniería en Sistemas Computacionales</h4>
+                        <h4>Universidad de Sonsonate</h4>
+                    </li>
+
+                    <li>
+                        <h5>2019-2021</h5>
+                        <h4>Bachillerato General</h4>
+                        <h4>CoEd. Varela Manzano</h4>
+                    </li>
+
+                </ul>
+            </article>
+
+            <article class="informacion__contacto educacion">
+                <h3 class="titulo">Certificaciones</h3>
+                <ul>
+
+                    <li>
+                        <h5>2023</h5>
+                        <h4>Actualizacion y Reparcion de Celulares</h4>
+                        <h4>Universidad de Sonsonate</h4>
+                    </li>
+
+                    <li>
+                        <h5>2023</h5>
+                        <h4>Fundamentos de Programacion en Python</h4>
+                        <h4>Universidad de Sonsonate</h4>
+                    </li>
+
+                    
+                    <li>
+                        <h5>2022</h5>
+                        <h4>Inglés Básico</h4>
+                        <h4>Junior Achievement El Salvador</h4>
+                    </li>
+
+                    <li>
+                        <h5>2021</h5>
+                        <h4>Reparacion y Mantenimiento de Computadoras</h4>
+                        <h4>Universidad de Sonsonate</h4>
+                    </li>
+
+                </ul>
+            </article>
+
+            <article class="informacion__contacto idiomas">
+                <h3 class="titulo">Idiomas</h3>
+                <ul>
+                    <li>
+                        <span class="texto">Español</span>
+                        <span class="porcentaje">
+                            <div style="width: 100%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="texto">Inglés</span>
+                        <span class="porcentaje">
+                            <div style="width: 40%;"></div>
+                        </span>
+                    </li>
+                </ul>
+            </article>
+
+
+        </section>
+        <section class="contenedor__principal-derecha">
+            <article class="about">
+                <h2 class="titulo2">Perfil</h2>
+                <p>Soy un estudiante de ingeniería en sistemas computacionales apasionado por la tecnología y el desarrollo de soluciones
+                innovadoras. Me considero una persona creativa y siempre estoy en busca de nuevas formas de resolver problemas. Mi
+                curiosidad y capacidad de pensamiento fuera de la caja me han permitido encontrar soluciones creativas y eficientes en
+                distintos proyectos.</p><br>
+                <p>Tengo una actitud positiva ante la vida y enfrento los retos con entusiasmo. Mi habilidad de liderazgo me permite
+                trabajar en equipo y motivar a otros para lograr objetivos en común. He liderado diversos proyectos de programación y he
+                sido capaz de guiar a mi equipo hacia el éxito a través de la comunicación efectiva y la delegación de tareas.</p><br>
+                <p>Me caracterizo por ser activo y siempre buscar la manera de mantenerme en constante aprendizaje. Tengo la habilidad de aprender
+                rápido y de adaptarme a nuevos entornos. Me gusta mantenerme actualizado sobre las últimas tendencias en tecnología y
+                estoy comprometido con mi carrera y con el desarrollo de mis habilidades.</p><br>
+                <p>Poseo un fuerte sentido de responsabilidad. Actualmente, busco una oportunidad
+                para aplicar mis habilidades y conocimientos en el mundo laboral, al mismo tiempo que sigo aprendiendo y desarrollándome
+                profesionalmente. Estoy convencido de que mi liderazgo, creatividad y actitud positiva serán de gran valor para
+                cualquier proyecto o equipo de trabajo en el que me involucre.</p>
+            </article>
+            <article class="about">
+                <h2 class="titulo2">Experiencia</h2>
+
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2021 - 2022</h5>
+                        <h5>Variedades Camila</h5>
+                    </div>
+                    <div class="texto">
+                        <h4>Marketing & Ventas</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint ab sit explicabo soluta
+                            officia minima labore aliquam
+                            quam architecto atque aliquid doloribus, esse minus assumenda quis voluptates? Odit, laborum
+                            expedita.</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2016 - 2018</h5>
+                        <h5>Electronica Wilfredo</h5>
+                    </div>
+                    <div class="texto">
+                        <h4>Reparacion & Mantenimieto</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint ab sit explicabo soluta
+                            officia minima labore aliquam
+                            quam architecto atque aliquid doloribus, esse minus assumenda quis voluptates? Odit, laborum
+                            expedita.</p>
+                    </div>
+                </div>
+
+            </article>
+            <article class="about habilidades">
+                <h2 class="titulo2">Habilidades Profesionales</h2>
+                <div class="box">
+                    <h4>HTML</h4>
+                    <div class="porcentaje">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="porcentaje">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>JavaScript</h4>
+                    <div class="porcentaje">
+                        <div style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>C++</h4>
+                    <div class="porcentaje">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Python</h4>
+                    <div class="porcentaje">
+                        <div style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>SQL</h4>
+                    <div class="porcentaje">
+                        <div style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Figma</h4>
+                    <div class="porcentaje">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Ilustrator</h4>
+                    <div class="porcentaje">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Git</h4>
+                    <div class="porcentaje">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="about intereses">
+                <h2 class="titulo2">Intereses</h2>
+                <ul>
+                    <li><i class="fa-solid fa-book"></i>Aprendizaje</li>
+                    <li><i class="fa-solid fa-icons"></i>Multimedia</li>
+                    <li><i class="fa-solid fa-pen-ruler"></i>Diseño</li>
+                    <li><i class="fa-solid fa-gamepad"></i>Juegos</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
